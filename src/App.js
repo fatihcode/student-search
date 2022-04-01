@@ -24,12 +24,14 @@ function App() {
       <h1>Student Search</h1>
       <hr />
 
-      <Search handleSubmit={handleSubmit} errorSubmit={errorSubmit} />
+      <div className="screen">
 
-      <hr />
+        <Search handleSubmit={handleSubmit} errorSubmit={errorSubmit} />
 
-      {error ? <Error message={error} /> : null}
-
+        {error ? <Error message={error} /> : null}
+        
+      </div>
+      
       <ResidentsList student={student} />
 
     </div>

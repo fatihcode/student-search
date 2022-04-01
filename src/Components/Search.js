@@ -13,7 +13,7 @@ function checkValidity(joiningDate, validityDate) {
   return (maxValid >= selected) && (maxValid >= today);
 }
 
-function Search({ handleSubmit, errorSubmit }) {
+export default function Search({ handleSubmit, errorSubmit }) {
 
   const [nameVal, setNameVal] = useState("")
   const [dateVal, setDateVal] = useState("")
@@ -58,9 +58,7 @@ function Search({ handleSubmit, errorSubmit }) {
           className={`form-control` + (valid ? "" : (dateVal ? "" : " invalid"))} />
       </div>
 
-      <button onClick={handleSearch} type="button" className="btn btn-primary mb-3" data-testid="addBtn">Add</button>
+      <button onClick={handleSearch} type="button" className="btn btn-primary" data-testid="addBtn">Add</button>
     </>
   );
 }
-
-export default Search;
